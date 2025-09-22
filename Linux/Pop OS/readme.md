@@ -99,11 +99,35 @@ alias config="nvim ~/.config/zsh"
 
 
 # functions
+function aze() {
+	if [ -n "$1" ]; then
+	  m "fix" && git rebase -i HEAD~$1 && git push -f
+	else
+	  m "fix" && git rebase -i HEAD~2 && git push -f
+	fi
+}
+
+function m() {
+	if [ -n "$1" ]; then
+	  git add . && git commit -am "$1" && git push -f
+	else
+	  git add . && git commit -am "no message" && git push -f
+	fi
+}
+
 function update() {
+    echo "update dependencies ..."
 	sudo apt update
+    echo "upgrade dependencies ... "
 	sudo apt upgrade
+    echo "remove unnecessary dependencies ... "
 	sudo apt autoremove
+    echo "update flatpak dependencies ... "
 	flatpak update
+    echo "sdk self update"
+    sdk selfupdate
+    echo "sdk update"
+    sdk update
 }
 ```
 
