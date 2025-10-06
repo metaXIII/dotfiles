@@ -71,8 +71,8 @@ export ZSH_HOME=$HOME/.config/zsh
 export PATH=$PATH:$ZSH_HOME
 export M2_HOME=$HOME/.sdkman/candidates/maven/current
 export JAVA_HOME=$HOME/.sdkman/candidates/java/current
-export PATH=$PATH:$M2_HOME
-export PATH=$PATH:JAVA_HOME
+export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:JAVA_HOME/bin
 
 source $ZSH_HOME/aliases.cfg
 
