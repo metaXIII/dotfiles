@@ -3,7 +3,7 @@
 ## ZSH
 
 ```bash
-sudo apt install zsh neovim zip unzip curl
+sudo pacman -S git neovim zsh firefox noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obsidian signal-desktop bitwarden proton-vpn-gtk-app zip unzip spotify-launcher timeshift pika-backup --needed
 ```
 
 ## Oh my posh
@@ -14,6 +14,23 @@ curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.config/zsh
 ## SDKMAN
 ```
 curl -s "https://get.sdkman.io" | bash
+```
+
+
+## Locale-gen
+```bash
+sudo nvim /etc/locale.gen
+# retirer à l'intérieur le commentaire sur fr_FR UTF-8
+sudo locale-gen
+```
+
+## yay Installation
+
+```bash
+cd Desktop
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 
