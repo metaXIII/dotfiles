@@ -3,7 +3,7 @@
 ## ZSH
 
 ```bash
-sudo pacman -S git neovim zsh firefox noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obsidian signal-desktop bitwarden proton-vpn-gtk-app zip unzip spotify-launcher timeshift pika-backup --needed
+sudo pacman -S git neovim zsh firefox noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra obsidian signal-desktop bitwarden proton-vpn-gtk-app zip unzip spotify-launcher timeshift pika-backup gvfs-smb --needed
 ```
 
 ## Oh my posh
