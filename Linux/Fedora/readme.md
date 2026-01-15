@@ -16,6 +16,11 @@ mkdir ~/.config/zsh && curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~
 curl -s "https://get.sdkman.io" | bash
 ```
 
+## nvm
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
 ## Links
 
 | subject| links                                        |
