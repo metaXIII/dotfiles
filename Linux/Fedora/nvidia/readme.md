@@ -44,11 +44,21 @@ to make it like :
 
 `GRUB_CMDLINE_LINUX="rhgb quiet rd.driver.pre=nvidia nvidia-drm.modeset=1"`
 
+
+```bash
+sudo nano /etc/dracut.conf.d/nvidia.conf
+```
+
+```bash
+add_drivers+=" nvidia nvidia_modeset nvidia_uvm nvidia_drm "
+```
+
 reload grub config
 
 ```bash
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg && sudo dracut -f
 ```
+
 
 ## Bonus 
 Do not forget to install flatpak apps for GE proton : 
