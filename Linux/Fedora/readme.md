@@ -8,7 +8,7 @@ sudo dnf install zsh -y && chsh -s $(which zsh)
 
 ## Oh my posh
 ```bash
-mkdir ~/.config/zsh && curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.config/zsh
+sudo dnf install oh-my-posh
 ```
 
 ## SDKMAN

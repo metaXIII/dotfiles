@@ -1,10 +1,5 @@
 # Defaults apps
 
-## dnf
-```bash
-sudo dnf install gnome-tweaks
-```
-
 ## flatpak
 
 ```bash

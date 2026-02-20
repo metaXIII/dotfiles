@@ -1,44 +1,38 @@
-location : `/etc/dnf/dnf.conf`
-
-```conf
 # see `man dnf.conf` for defaults and possible options
 
 [main]
-# Utiliser le cache des paquets pour éviter les re-téléchargements
-keepcache=True
-
-# Télécharger les paquets en parallèle (utile avec une bonne connexion)
-max_parallel_downloads=15
-
-# Choisir automatiquement le miroir le plus rapide
+# --- Performance & Téléchargement ---
+# 10 à 15 est le "sweet spot". Au-delà, certains miroirs peuvent limiter la connexion.
+max_parallel_downloads=10
 fastestmirror=True
+# Utilise le protocole DeltaRPM pour ne télécharger que les différences (gain de bande passante)
+deltarpm=True
 
-# Réduire les métadonnées inutiles
-metadata_timer_sync=3600
-
-# Installer automatiquement les dépendances faibles (pratique pour le dev)
-install_weak_deps=True
-
-# Nettoyer automatiquement les dépendances inutiles
+# --- Gestion du Cache & Stockage ---
+# Garder le cache est utile si tu réinstalles souvent, sinon ça prend de la place pour rien.
+keepcache=True
+# Supprime les dépendances qui ne sont plus nécessaires après un "remove"
 clean_requirements_on_remove=True
+# Supprime les versions précédentes des paquets du cache pour libérer de l'espace
+minrate=30k
+timeout=30
 
-# Affichage plus clair
+# --- Expérience Utilisateur (UI) ---
 color=always
-color_list_installed_older=yellow
-color_list_installed_newer=green
-color_list_available_upgrade=bold,blue
+# Affiche une barre de progression plus moderne lors de l'installation
+showdupesfromrepos=False
+# Très pratique : affiche la taille totale du téléchargement et l'espace disque requis
+ip_resolved=IPv4
 
-# Tolérance réseau (utile sur laptop / Wi-Fi)
-timeout=20
-retries=5
-
-# Vérification GPG (sécurité, à garder activé)
+# --- Stabilité & Résolution ---
+# Force DNF à utiliser la meilleure version disponible (parfois strict, mais propre)
+best=True
+# Évite de bloquer toute la transaction si un dépôt est temporairement hors ligne
+skip_if_unavailable=True
+install_weak_deps=True
 gpgcheck=True
 
-# Résolution plus rapide des dépendances
-best=True
+# --- Optimisation Base de Données ---
+# On rafraîchit les métadonnées moins souvent pour gagner du temps au lancement
+metadata_expire=6h
 
-# Priorité à la stabilité
-skip_if_unavailable=True
-
-```
