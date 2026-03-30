@@ -1,3 +1,8 @@
+# dnf config
+
+location: `/etc/dnf/dnf.conf` :
+
+```conf
 # see `man dnf.conf` for defaults and possible options
 
 [main]
@@ -13,7 +18,7 @@ deltarpm=True
 keepcache=True
 # Supprime les dépendances qui ne sont plus nécessaires après un "remove"
 clean_requirements_on_remove=True
-# Supprime les versions précédentes des paquets du cache pour libérer de l'espace
+# Supprime les versions précédentes des paquets du cache pour libérer de l'espace```
 minrate=30k
 timeout=30
 
@@ -36,3 +41,4 @@ gpgcheck=True
 # On rafraîchit les métadonnées moins souvent pour gagner du temps au lancement
 metadata_expire=6h
 
+```
