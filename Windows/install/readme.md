@@ -14,3 +14,7 @@ Add in features :
 - Plateforme de l'hyperviseur Windows
 - Plateforme d'ordinateur virtuel
 - Sous système Windows pour linux
+
+
+# To Deactivate
+Alias (for python usage)

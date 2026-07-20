@@ -36,6 +36,7 @@ Install-WithWinget Cyanfish.NAPS2
 Install-WithWinget 7zip.7zip
 Install-WithWinget Kopia.KopiaUI
 Install-WithWinget Proton.ProtonDrive
+Install-WithWinget Jetbrains.Toolbox
 
 Write-Host "Installation of winget software done [✅]"
 
