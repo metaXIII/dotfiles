@@ -34,6 +34,7 @@ Install-WithWinget Proton.ProtonVPN
 Install-WithWinget Docker.DockerDesktop
 Install-WithWinget Cyanfish.NAPS2
 Install-WithWinget 7zip.7zip
+Install-WithWinget Kopia.KopiaUI
 
 
 Write-Host "Installation of winget software done [✅]"
