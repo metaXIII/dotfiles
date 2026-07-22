@@ -38,6 +38,7 @@ Install-WithWinget Kopia.KopiaUI
 Install-WithWinget Proton.ProtonDrive
 Install-WithWinget Jetbrains.Toolbox
 Install-WithWinget VideoLAN.VLC
+Install-WithWinget Microsoft.PowerToys 
 
 Write-Host "Installation of winget software done [✅]"
 
