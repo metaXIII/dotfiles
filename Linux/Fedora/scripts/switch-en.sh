@@ -1,5 +1,5 @@
 switch-en() {
-    echo "=== Configuration du clavier en Anglais US (en_US / QWERTY) pour Fedora 44 ==="
+    echo "=== Configuration du clavier en Anglais US (en_US / QWERTY) pour Fedora ==="
 
     # 1. Changement immédiat pour la session active (X11 et Wayland)
     local SESSION_STATUS=0

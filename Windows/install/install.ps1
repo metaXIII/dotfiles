@@ -303,10 +303,10 @@ function backup($argument) {
                 Write-Output "Back up was successfully removed"
                 Write-Output $separator
                 Write-Output ""
-                wsl --export FedoraLinux-44 $fileName
+                wsl --export FedoraLinux-45 $fileName
             }
             else {
-                wsl --export FedoraLinux-44 $fileName
+                wsl --export FedoraLinux-45 $fileName
             }
             Write-Output "WSL Export Successfully Finished"
             Write-Output $separator
