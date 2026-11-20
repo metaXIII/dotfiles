@@ -1,0 +1,8 @@
+[Unit]
+Description=Archivage automatique des fichiers inactifs vers le HDD
+
+[Service]
+Type=oneshot
+ExecStartPre=/usr/bin/mkdir -p %h/Logs/archive
+# On génère un nom de log unique avec la date du jour, et on redirige stdout et stderr dedans
+ExecStart=/bin/bash -c '/bin/bash /home/meta/Lab/dotfiles/Linux/hardware/MSI/scripts/archiver.sh >> %h/Logs/archive/archive-$(date +%%d.%%m.%%Y.%%H.%%M.%%S).log 2>&1'
