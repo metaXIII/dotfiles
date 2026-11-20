@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer pour l'archivage automatique mensuel des fichiers inactifs
+
+[Timer]
+# Se lance le 1er de chaque mois à 03:00:00
+OnCalendar=*-*-01 03:00:00
+# Si le PC était éteint à cette heure-là, lance la tâche dès le prochain démarrage
+Persistent=true
+
+[Install]
+WantedBy=timers.target

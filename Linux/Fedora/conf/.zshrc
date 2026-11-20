@@ -39,3 +39,4 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 source $HOME/.config/zsh/env.cfg
 eval "$(oh-my-posh init zsh --config $HOME/.config/zsh/zen.toml)"
+
