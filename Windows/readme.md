@@ -9,7 +9,7 @@
 ```
 
 ```pwsh
-wsl --install -d FedoraLinux-44
+wsl --install -d FedoraLinux-45
 ```
 
 ## miscellaneous
